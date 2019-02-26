@@ -1,0 +1,68 @@
+Virtual User Script started at : 1/5/2018 8:59:28 AM
+Starting action vuser_init.
+Notify: Transaction "Login" started.
+System.out: Input user name=Asmsa1                                                                                                                                                      Notify:
+System.out: Input password=Asmsa1                                                                                                                                                      Notify:
+System.out: Output uams ticket=EXT<Tksmau7Gkn7K6zEL1YzCctFQxCtf55qsJ3CF0Lb0;count=2;appId=CRM;>                                                                                                                                                      Notify:
+System.out: Input appId=CRM                                                                                                                                                      Notify:
+Notify: Transaction "Login" ended with a "Pass" status (Duration: 0.9164).
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Actions.
+System.out: Is Primary = true                                                                                                                                                      Notify:
+System.out: Role = Chooser                                                                                                                                                      Notify:
+Notify: Parameter Substitution: parameter "p_phone" =  "0105085928"
+Notify: Parameter Substitution: parameter "p_phonenumber" =  "0105085929"
+Notify: Parameter Substitution: parameter "p_DocumentNo" =  "10000000"
+Notify: Transaction "CRM_POC_UpdateContact" started.
+System.out: Contact Object = TestPrepaidAPI2                                                                                                                                                      Notify:
+Error: System.err: com.amdocs.cih.exception.InvalidUsageException: The ContactDetails must be set in the CreateContact object for this service.                                                                                                                                                      Error
+System.err: 	at weblogic.rjvm.ResponseImpl.unmarshalReturn(ResponseImpl.java:234)                                                                                                                                                      Error
+System.err: 	at weblogic.rmi.cluster.ClusterableRemoteRef.invoke(ClusterableRemoteRef.java:348)                                                                                                                                                      Error
+System.err: 	at weblogic.rmi.cluster.ClusterableRemoteRef.invoke(ClusterableRemoteRef.java:259)                                                                                                                                                      Error
+System.err: 	at com.amdocs.cih.services.contact.ejbs.ContactServiceBean_pni0m_EOImpl_12130_WLStub.updateContact(Unknown Source)                                                                                                                                                      Error
+System.err: 	at Actions.callEjb(Actions.java:359)                                                                                                                                                      Error
+System.err: 	at Actions.action(Actions.java:210)                                                                                                                                                      Error
+System.err: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)                                                                                                                                                      Error
+System.err: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)                                                                                                                                                      Error
+System.err: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)                                                                                                                                                      Error
+System.err: 	at java.lang.reflect.Method.invoke(Method.java:498)                                                                                                                                                      Error
+System.err: 	at com.hpe.lr.java.replay.ScriptContainer.invoke(ScriptContainer.java:68)                                                                                                                                                      Error
+System.err: 	at com.hpe.lr.java.replay.ScriptContainer.action(ScriptContainer.java:59)                                                                                                                                                      Error
+Error: System.err: Caused by: com.amdocs.cih.exception.InvalidUsageException: The ContactDetails must be set in the CreateContact object for this service.                                                                                                                                                      Error
+System.err: 	at com.amdocs.cih.orchestration.UpdateContactOrchestration.executeOrchestration(UpdateContactOrchestration.java:109)                                                                                                                                                      Error
+System.err: 	at com.amdocs.cih.orchestration.UpdateContactOrchestration.execute(UpdateContactOrchestration.java:84)                                                                                                                                                      Error
+System.err: 	at com.amdocs.aif.consumer.CustomAdapterBindingHandler.executeOperation(CustomAdapterBindingHandler.java:90)                                                                                                                                                      Error
+System.err: 	at com.amdocs.aif.consumer.ServiceContext.executeWithRetries(ServiceContext.java:1168)                                                                                                                                                      Error
+System.err: 	at com.amdocs.aif.consumer.ServiceContext.executeOperationImpl(ServiceContext.java:889)                                                                                                                                                      Error
+System.err: 	at com.amdocs.aif.consumer.ServiceContext.executeOperation(ServiceContext.java:772)                                                                                                                                                      Error
+System.err: 	at com.amdocs.aif.consumer.ServiceContext.executeOperationInternal(ServiceContext.java:603)                                                                                                                                                      Error
+System.err: 	at com.amdocs.aif.consumer.ServiceContext.executeOperation(ServiceContext.java:248)                                                                                                                                                      Error
+System.err: 	at com.amdocs.cih.common.core.OperationAssist.executeOperation(OperationAssist.java:104)                                                                                                                                                      Error
+System.err: 	at com.amdocs.cih.services.contact.delegate.ContactService.updateContact(ContactService.java:97)                                                                                                                                                      Error
+System.err: 	at com.amdocs.cih.services.contact.ejbs.ContactServiceBean.updateContact(ContactServiceBean.java:48)                                                                                                                                                      Error
+System.err: 	at com.amdocs.cih.services.contact.ejbs.ContactServiceBean_pni0m_EOImpl.__WL_invoke(Unknown Source)                                                                                                                                                      Error
+System.err: 	at weblogic.ejb.container.internal.SessionRemoteMethodInvoker.invoke(SessionRemoteMethodInvoker.java:34)                                                                                                                                                      Error
+System.err: 	at com.amdocs.cih.services.contact.ejbs.ContactServiceBean_pni0m_EOImpl.updateContact(Unknown Source)                                                                                                                                                      Error
+System.err: 	at com.amdocs.cih.services.contact.ejbs.ContactServiceBean_pni0m_EOImpl_WLSkel.invoke(Unknown Source)                                                                                                                                                      Error
+System.err: 	at weblogic.rmi.internal.BasicServerRef.invoke(BasicServerRef.java:701)                                                                                                                                                      Error
+System.err: 	at weblogic.rmi.cluster.ClusterableServerRef.invoke(ClusterableServerRef.java:231)                                                                                                                                                      Error
+System.err: 	at weblogic.rmi.internal.BasicServerRef$1.run(BasicServerRef.java:527)                                                                                                                                                      Error
+System.err: 	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)                                                                                                                                                      Error
+System.err: 	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:146)                                                                                                                                                      Error
+System.err: 	at weblogic.rmi.internal.BasicServerRef.handleRequest(BasicServerRef.java:523)                                                                                                                                                      Error
+System.err: 	at weblogic.rmi.internal.wls.WLSExecuteRequest.run(WLSExecuteRequest.java:118)                                                                                                                                                      Error
+System.err: 	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:311)                                                                                                                                                      Error
+System.err: 	at weblogic.work.ExecuteThread.run(ExecuteThread.java:263)                                                                                                                                                      Error
+Ending action Actions.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Error: Vuser started transaction "CRM_POC_UpdateContact", but did not reach a corresponding end transaction statement. The transaction ended automatically with status 'fail'.
+Notify: Transaction "CRM_POC_UpdateContact" ended with a "Fail" status (Duration: 0.2334).
+Notify: Transaction "CRM_POC_UpdateContact" has 2 error message(s).
+Notify: The 1st error message associated with transaction "CRM_POC_UpdateContact" is "Error 0: System.err: com.amdocs.cih.exception.InvalidUsageException: The ContactDetails must be set in the CreateContact object for this service.                                                                                                                                                      Error"
+Notify: The 2nd error message associated with transaction "CRM_POC_UpdateContact" is "Error 0: System.err: Caused by: com.amdocs.cih.exception.InvalidUsageException: The ContactDetails must be set in the CreateContact object for this service.                                                                                                                                                      Error"
+Ending action vuser_end.
+Vuser Terminated.

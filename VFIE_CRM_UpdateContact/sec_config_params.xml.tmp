@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<acm_params_config>
+	<groups>
+		<group name="Login_Service">
+			<description>UAMS Login Service parameters.</description>
+		</group>
+		<group name="Session_Service">
+			<description>UAMS Session parameters.</description>
+		</group>
+		<group name="Password_Policy">
+			<description>UAMS Password Policy parameters.</description>
+		</group>
+		<group name="Account_Policy">
+			<description>UAMS Account Policy parameters.</description>
+		</group>
+		<group name="Trace">
+			<description>UAMS Trace parameters.</description>
+		</group>
+		<group name="Weblogic">
+			<description>Weblogic security parameters.</description>
+		</group>
+
+	</groups>
+	<parameters>
+		<parameter name="Authn_Unactive_Timeout" type="int" key="STEP_CONS_INACTIVE_TIME" group_name="Login_Service">
+			<defvalue>45</defvalue>
+			<description>Defines number of days user can be inactive before the account will be locked.</description>
+			<minvalue>0</minvalue>
+			<maxvalue>365</maxvalue>
+		</parameter>
+
+		<parameter name="Max_Open_Sessions" type="int" key="STEP_CONS_SESSION_LIMIT" group_name="Login_Service">
+			<defvalue>10</defvalue>
+			<description>Maximum number of sessions that can be opened.</description>
+			<minvalue>0</minvalue>
+		</parameter>
+
+		<parameter name="Allowed_Login_Trials" type="int" key="policy.account.lockout.count" group_name="Login_Service">
+			<defvalue>3</defvalue>
+			<description>Defines the number of times user can try to login before the account is locked (0 - for locking mechanism disabled).</description>
+			<minvalue>0</minvalue>
+			<maxvalue>365</maxvalue>
+		</parameter>
+
+		<parameter name="Account_Locking_Time" type="int" key="policy.account.lockout.time" group_name="Login_Service">
+			<defvalue>0</defvalue>
+			<description>Time period that defines when account will be automatically unlocked (0 - only administrator can unlock the account).</description>
+			<minvalue>0</minvalue>
+		</parameter>
+
+		<parameter name="Sess_Expiration_Time" type="int" key="SESS_FACT_EXP_TIMOUT" group_name="Session_Service">
+			<defvalue>1800</defvalue>
+			<description>Session expiration time in seconds.</description>
+			<minvalue>0</minvalue>
+		</parameter>
+
+		<parameter name="Sess_Idle_Time" type="int" key="SESS_FACT_IDL_TIMOUT" group_name="Session_Service">
+			<defvalue>1800</defvalue>
+			<description>Session allowed idle time before session is disabled (in seconds).</description>
+			<minvalue>0</minvalue>
+		</parameter>
+
+		<parameter name="Pwd_Min_Lowercase" type="int" key="USR_PWD_LOW_MIN" group_name="Password_Policy">
+			<defvalue>1</defvalue>
+			<description>Minimum number of lowercase letters in password string.</description>
+			<minvalue>0</minvalue>
+		</parameter>
+
+		<parameter name="Pwd_Min_Uppercase" type="int" key="USR_PWD_CAP_MIN" group_name="Password_Policy">
+			<defvalue>1</defvalue>
+			<description>Minimum number of capital (uppercase) letters in password string.</description>
+			<minvalue>0</minvalue>
+		</parameter>
+
+		<parameter name="Pwd_Min_Numbers" type="int" key="USR_PWD_NUM_MIN" group_name="Password_Policy">
+			<defvalue>1</defvalue>
+			<description>Minimum number of digits in password string.</description>
+			<minvalue>0</minvalue>
+		</parameter>
+
+		<parameter name="Pwd_Min_Symbols" type="int" key="USR_PWD_NONALPHNUM_MIN" group_name="Password_Policy">
+			<defvalue>0</defvalue>
+			<description>Minimum number of symbols in password string.</description>
+			<minvalue>0</minvalue>
+		</parameter>
+
+		<parameter name="Pwd_Min_Length" type="int" key="USR_PWD_LEN_MIN" group_name="Password_Policy">
+			<defvalue>4</defvalue>
+			<description>Minimum length of password string.</description>
+			<minvalue>1</minvalue>
+		</parameter>
+
+		<parameter name="Pwd_CredHistory_Size" type="int" key="USR_CREDHISTORY_SIZE" group_name="Password_Policy">
+			<defvalue>12</defvalue>
+			<description>Number of passwords to remember for password history check.</description>
+			<minvalue>0</minvalue>
+			<maxvalue>365</maxvalue>
+		</parameter>
+
+		<parameter name="Pwd_UserId_Check" type="boolean" key="USR_PWD_CHECK_USERID" group_name="Password_Policy">
+			<defvalue>false</defvalue>
+			<description>Indicates whether to check if password is different from username.</description>
+		</parameter>
+
+		<parameter name="Pwd_BadPattern_File" type="string" key="USR_PWD_BADPATTERN_FILE" group_name="Password_Policy">
+			<defvalue>null</defvalue>
+			<description>Name of file that contains bad password patterns.</description>
+		</parameter>
+
+		<parameter name="Pwd_Expiration_Time" type="int" key="policy.password.expiration.time" group_name="Password_Policy">
+			<defvalue>90</defvalue>
+			<description>Default password expiration time in days (0 - to never expire password).</description>
+			<minvalue>0</minvalue>
+			<maxvalue>365</maxvalue>
+		</parameter>
+
+		<parameter name="Pwd_Expiring_Time" type="int" key="policy.password.expiring.time" group_name="Password_Policy">
+			<defvalue>14</defvalue>
+			<description>Number of days before password expiration time when password is marked for user notifications.</description>
+			<minvalue>0</minvalue>
+			<maxvalue>365</maxvalue>
+		</parameter>
+
+		<parameter name="Account_Expiration_Time" type="int" key="policy.account.expiration.time" group_name="Account_Policy">
+			<defvalue>365</defvalue>
+			<description>Default account expiration time in days (0 - to never expire account).</description>
+			<minvalue>0</minvalue>
+		</parameter>
+
+		<parameter name="Account_Expiring_Time" type="int" key="policy.account.expiring.time" group_name="Account_Policy">
+			<defvalue>30</defvalue>
+			<description>Number of days before account expiration time when account is marked for user or adminitrator notifications.</description>
+			<minvalue>0</minvalue>
+			<maxvalue>365</maxvalue>
+		</parameter>
+
+		<parameter name="Weblogic8_Disabled" type="int" key="WL8_DISABLED" group_name="Weblogic">
+			<defvalue>1</defvalue>
+			<description>If running with Weblogic 8 this parameter should be 0. If not, 1.</description>
+			<minvalue>0</minvalue>
+			<maxvalue>1</maxvalue>
+		</parameter>
+
+		<parameter name="Weblogic9_Disabled" type="int" key="WL9_DISABLED" group_name="Weblogic">
+			<defvalue>0</defvalue>
+			<description>If running with Weblogic 9 this parameter should be 0. If not, 1.</description>
+			<minvalue>0</minvalue>
+			<maxvalue>1</maxvalue>
+		</parameter>
+
+		<parameter name="Weblogic_Authentication_Trace" type="boolean" key="AUTHN_PROVIDER_TRACE" group_name="Trace">
+			<defvalue>false</defvalue>
+			<description>Indicates whether to trace Weblogic authentication events.</description>
+		</parameter>
+
+		<parameter name="Weblogic_Principal_Validator_Trace" type="boolean" key="PCPL_VALIDATOR_PROVIDER_TRACE" group_name="Trace">
+			<defvalue>false</defvalue>
+			<description>Indicates whether to trace Weblogic principle validation events.</description>
+		</parameter>
+
+		<parameter name="Weblogic_Role_Mapper_Trace" type="boolean" key="ROLE_MAPPER_TRACE" group_name="Trace">
+			<defvalue>false</defvalue>
+			<description>Indicates whether to trace Weblogic role mapping events.</description>
+		</parameter>
+
+		<parameter name="Weblogic_Role_Provider_Trace" type="boolean" key="ROLE_PROVIDER_TRACE" group_name="Trace">
+			<defvalue>false</defvalue>
+			<description>Indicates whether to trace Weblogic role provider events.</description>
+		</parameter>
+
+		<parameter name="Role_Hierarchy_Trace" type="boolean" key="ROLE_HIER_TRACE" group_name="Trace">
+			<defvalue>false</defvalue>
+			<description>Indicates whether to trace role hierarchy operations.</description>
+		</parameter>
+
+		<parameter name="Jdbc_Pool_Trace" type="boolean" key="SEC_DB_TRACK_RESOURCE" group_name="Trace">
+			<defvalue>false</defvalue>
+			<description>Indicates whether to trace connection management of the JDBC connection pool.</description>
+		</parameter>
+
+
+	</parameters>
+</acm_params_config>

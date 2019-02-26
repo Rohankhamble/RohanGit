@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VugenScriptMetadata>
+  <ScriptName>VFIE_CRM_UpdateContact</ScriptName>
+  <Protocol>Java Vuser</Protocol>
+  <ActionFiles>
+    <FileEntry Name="vuser_init.java" Filter="2" />
+    <FileEntry Name="Actions.java" Filter="2" />
+    <FileEntry Name="vuser_end.java" Filter="2" />
+  </ActionFiles>
+  <GeneralFiles>
+    <FileEntry Name="VFIE_CRM_UpdateContact.usr" Filter="4" />
+    <FileEntry Name="default.cfg" Filter="4" />
+    <FileEntry Name="default.usp" Filter="4" />
+    <FileEntry Name="VFIE_CRM_UpdateContact.prm" Filter="2" />
+    <FileEntry Name="p_MSISDN.dat" Filter="2" />
+    <FileEntry Name="p_ProviderURL.dat" Filter="2" />
+    <FileEntry Name="appserver.dat" Filter="2" />
+    <FileEntry Name="ScriptUploadMetadata.xml" Filter="2" />
+    <FileEntry Name="IMSI_DSA_1.dat" Filter="2" />
+    <FileEntry Name="MSISDN_DSA_1.dat" Filter="2" />
+    <FileEntry Name="p_DocumentNo(1).dat" Filter="2" />
+    <FileEntry Name="p_DocumentNo.dat" Filter="2" />
+    <FileEntry Name="p_name.dat" Filter="2" />
+    <FileEntry Name="Actions.class" Filter="1" />
+    <FileEntry Name="Actions.java.bak" Filter="1" />
+    <FileEntry Name="Actions.java.sed" Filter="1" />
+    <FileEntry Name="Bookmarks.xml" Filter="1" />
+    <FileEntry Name="Breakpoints.xml" Filter="1" />
+    <FileEntry Name="CompilerLogMetadata.xml" Filter="1" />
+    <FileEntry Name="logfile.log" Filter="1" />
+    <FileEntry Name="mdrv.log" Filter="1" />
+    <FileEntry Name="mdrv_cmd.txt" Filter="1" />
+    <FileEntry Name="output.txt" Filter="1" />
+    <FileEntry Name="ReplaySummaryReport.xml" Filter="1" />
+    <FileEntry Name="sec_config_params.xml.tmp" Filter="1" />
+    <FileEntry Name="ThumbnailsCache.tmp" Filter="1" />
+    <FileEntry Name="TransactionsData.db" Filter="1" />
+    <FileEntry Name="uams.properties" Filter="1" />
+    <FileEntry Name="uams_mm.store" Filter="1" />
+    <FileEntry Name="UserTasks.xml" Filter="1" />
+    <FileEntry Name="VFIE_CRM_UpdateContact.prm.bak" Filter="1" />
+    <FileEntry Name="VFIE_CRM_UpdateContact.sdf" Filter="1" />
+  </GeneralFiles>
+</VugenScriptMetadata>

@@ -1,0 +1,1 @@
+-usr "C:\VFIE_CRM_UpdateContact\VFIE_CRM_UpdateContact.usr" -compile_only -out "C:\VFIE_CRM_UpdateContact\" -drv_log_file "C:\VFIE_CRM_UpdateContact\mdrv.log" -cfg "C:\VFIE_CRM_UpdateContact\default.cfg" -product_name vugen
